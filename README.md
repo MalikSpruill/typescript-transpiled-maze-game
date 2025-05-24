@@ -17,6 +17,9 @@ The game is a text-based interactive experience that runs in the terminal. It is
 - **Programming Language**: The game is implemented in TypeScript, leveraging its typing, simplicity and versatility for text-based applications.
 - **Libraries**:
   - `node` standard library for terminal interaction and system-level operations.
+  - `ESLint` a pluggable JavaScript/TypeScript linter used to catch code errors, enforce style rules, and improve code quality automatically.
+  - `Prettier` is an opinionated code formatter that enforces consistent code style by automatically formatting your code based on a set of rules.
+  - `Chalk` is a library for styling terminal output in Node.js, allowing you to add colors, bold text, and other formatting to your console logs.
 
 ## How to Set Up and Play
 
