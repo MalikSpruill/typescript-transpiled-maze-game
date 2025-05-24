@@ -15,42 +15,46 @@ The game is a text-based interactive experience that runs in the terminal. It is
 ## Technologies Used
 
 - **Programming Language**: The game is implemented in TypeScript, leveraging its typing, simplicity and versatility for text-based applications.
-- **Libraries**: 
-    - `node` standard library for terminal interaction and system-level operations.
+- **Libraries**:
+  - `node` standard library for terminal interaction and system-level operations.
+
 ## How to Set Up and Play
 
 1. **Prerequisites**:
-     - Ensure Node 20.x is installed on your system. You can download it from [nodejs.org](https://nodejs.org/en/download).
-     - A terminal or command-line interface is required to run the game.
+
+   - Ensure Node 20.x is installed on your system. You can download it from [nodejs.org](https://nodejs.org/en/download).
+   - A terminal or command-line interface is required to run the game.
 
 2. **Clone the Repository**:
-     - Clone the project repository to your local machine using the following command:
-         ```bash
-         git clone <repository-url>
-         ```
-     - Replace `<repository-url>` with the actual URL of the repository.
+
+   - Clone the project repository to your local machine using the following command:
+     ```bash
+     git clone <repository-url>
+     ```
+   - Replace `<repository-url>` with the actual URL of the repository.
 
 3. **Navigate to the Project Directory**:
-     - Open your terminal and navigate to the directory where the project is located:
-         ```bash
-         cd /path/to/milestone-two-artifact
-         ```
+
+   - Open your terminal and navigate to the directory where the project is located:
+     ```bash
+     cd /path/to/milestone-two-artifact
+     ```
 
 4. **Run the Game**:
-     - Install the npm dependencies
-        ```
-        npm i
-        ```
-     - Execute the game script using npm:
-         ```bash
-         npm run serve
-         ```
-     - Optionally, you can run the build to transpile Typescript to Javascript to reflect production and run the output index file
-        ```
-        npm run build
-        npm start
-        ```
-     - Follow the on-screen instructions to start playing.
+   - Install the npm dependencies
+     ```
+     npm i
+     ```
+   - Execute the game script using npm:
+     ```bash
+     npm run serve
+     ```
+   - Optionally, you can run the build to transpile Typescript to Javascript to reflect production and run the output index file
+     ```
+     npm run build
+     npm start
+     ```
+   - Follow the on-screen instructions to start playing.
 
 ## Contributor
 
