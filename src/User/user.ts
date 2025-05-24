@@ -1,17 +1,21 @@
 import gameDetails from "../Game/gameDetails";
 import ask from "../Utils/ask";
+import chalk from "chalk";
 
+// User class to manage user details and actions
 export class User {
     private name: string;
     private currentRoom: string;
     private inventory: string[];
 
+    // Constructor to initialize user properties
     constructor(name: string = "Random adventurer", currentRoom: string = "", inventory: string[] = []) {
         this.name = name;
         this.currentRoom = currentRoom;
         this.inventory = inventory;
     }
 
+    // Getter methods to access private properties
     public get getCurrentRoom(): string {
         return this.currentRoom;
     }
@@ -20,6 +24,7 @@ export class User {
         return this.inventory;
     }
 
+    // Getter method to show the user's game status
     public async showStatus(): Promise<void> {
         console.log(`\n${this.name}, you are in the ${this.currentRoom}.\n`);
         console.log(`Inventory: ${this.inventory.join(', ')}`);
@@ -33,30 +38,46 @@ export class User {
         await ask.question('Tap enter to continue');
     }
 
+    // Getter method to show the instructions for the game in respect to the user
     public async showInstructions(): Promise<void> {
-        console.log(gameDetails.gameTitle);
-        console.log(`Collect ${gameDetails.gameItems.length} items to win the game`);
-        console.log('Move commands:', '');
-    
+        let moveCommands: string = "";
         gameDetails.moveCommands.forEach((move, index) => {
             if (index !== (gameDetails.moveCommands.length - 1)) {
-                process.stdout.write(`${move} | `);
+                moveCommands = moveCommands.concat(`${move} | `);
             } else {
-                console.log(move);
+                moveCommands = moveCommands.concat(move);
             }
         });
-        console.log('How to add to Inventory, type: \'item name\'');
-        console.log('Type \'Show Status\' to see current room, inventory, and the item in the current room if any');
-        console.log('Type \'Show Instructions\' to see the instructions again');
-        
-        await ask.question('Tap enter to continue');
+
+        console.log(
+            chalk.black.bgWhite.bold(
+            ('\n' +
+            gameDetails.gameTitle
+            + '\n' +
+            `Collect ${gameDetails.gameItems.length} items to win the game`
+            + '\n' +
+            'Move commands: '
+            + moveCommands
+            + '\n' +
+            'How to add to Inventory, type: \'item name\''
+            + '\n' +
+            'Type \'Show Status\' to see current room, inventory, and the item in the current room if any'
+            + '\n' +
+            'Type \'Show Instructions\' to see the instructions again')
+            + '\n' 
+            )
+        );
+
+        await ask.question(chalk.blue('Tap enter to continue'));
     }
 
+    // Getter method to add a game item to the user's inventory
     public addToInventory(item: string): void {
         this.inventory.push(item);
         console.log(`Added ${item} to inventory.`);
     }
 
+    // Setter method to set the current room of the user
     public set setCurrentRoom(room: string) {
         this.currentRoom = room;
         console.log(`Moved to ${room}.`);
