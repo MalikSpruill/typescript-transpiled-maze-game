@@ -1,6 +1,6 @@
-# Milestone Two Artifact - README
+# Typescript-Transpiled-Maze-Game - README
 
-This file serves as the README for the **milestone-two-artifact** project, which is a terminal-based game designed as part of the CS Capstone Materials. The purpose of this project is to demonstrate the application of software engineering principles and showcase the functionality of the game artifact.
+This file serves as the README for the project, which was originally a single-file, terminal-based Python game designed as part of the Computer Science Program Capstone. The purpose of this project is to demonstrate the application of software engineering principles and showcase the functionality of the game artifact.
 
 ## Overview of the Game
 
