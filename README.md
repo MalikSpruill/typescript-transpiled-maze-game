@@ -2,6 +2,8 @@
 
 This file serves as the README for the project, which was originally a single-file, terminal-based Python game designed as part of the Computer Science Program Capstone. The purpose of this project is to demonstrate the application of software engineering principles and showcase the functionality of the game artifact.
 
+Link to original project: [Here](https://github.com/MalikSpruill/text-based-maze-game)
+
 ## Overview of the Game
 
 The game is a text-based interactive experience that runs in the terminal. It is designed to engage players with a series of scenarios that they must navigate using simple text commands. The game emphasizes logic, problem-solving, and creativity, providing an enjoyable and thought-provoking experience.
